@@ -9,6 +9,7 @@ def create_order(symbol, side, order_type, quantity, price=None):
         "side": side,
         "type": order_type,
         "quantity": quantity,
+        "newOrderRespType": "RESULT",
     }
 
     if order_type == "LIMIT":

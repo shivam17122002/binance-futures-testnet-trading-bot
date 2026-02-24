@@ -4,6 +4,9 @@ from logging.handlers import RotatingFileHandler
 def setup_logger():
     logger = logging.getLogger("trading_bot")
     logger.setLevel(logging.INFO)
+
+    if logger.handlers:
+        return logger
     
     handler = RotatingFileHandler(
         "trading_bot.log",
